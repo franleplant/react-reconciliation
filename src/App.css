@@ -1,0 +1,9 @@
+.comp {
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+body {
+  max-width: 1100px;
+}
+
