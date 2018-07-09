@@ -5,9 +5,9 @@ export class CompB extends React.Component {
   render() {
     return (
       <div className="comp">
-        <h3>CompB's render tree</h3>
+        <h3>CompB render tree</h3>
         <p>
-          You wont see this in your HOC's compB render tree because react has
+          You wont see this in your HOC compB render tree because react has
           not run the reconciliation process yet
         </p>
         <p>
@@ -26,7 +26,7 @@ export class CompA extends React.Component {
   render() {
     return (
       <div className="comp">
-        <h3>CompA's render tree</h3>
+        <h3>CompA render tree</h3>
         <CompB comment="you wont see CompB's renderTree. Children is empty because React has not run the reconciliation process yet" />
       </div>
     );
@@ -46,7 +46,7 @@ export function IIHoc(Comp) {
 
       return (
         <div className="comp">
-          <h3>HOC's render tree</h3>
+          <h3>HOC render tree</h3>
           <code>
             <pre>{JSON.stringify(toPrintable(renderTree), null, 2)}</pre>
           </code>
@@ -65,7 +65,7 @@ export default class App extends React.Component {
     const EnhancedCompA = IIHoc(CompA);
     return (
       <div className="comp">
-        <h3>App's render tree</h3>
+        <h3>App render tree</h3>
 
         <EnhancedCompA />
       </div>
